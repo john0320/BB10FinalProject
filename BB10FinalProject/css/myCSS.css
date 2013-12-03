@@ -1,0 +1,112 @@
+/*Form CSS*/
+
+
+#listHere {
+	padding-left: 0;
+	margin-left: 10px;
+	padding-bottom:0;
+	border-bottom: 1px solid gray;
+}
+
+
+.form {
+	width:500px;
+	display:inline-block;
+	float:right;
+	padding:0px 20px 5px 10px;
+	margin-top:-80px;
+}
+
+.toggle {
+	width:400px;
+	display:inline-block;
+	float:right;
+	vertical-align: right;
+}
+
+
+#myForm {
+	padding-top:100px;
+}
+
+.label {
+	width:200px;
+	float:left;
+	padding:10px 0px 25px 15px;
+	margin-top: 20px;
+}
+
+.labelToggle {
+	width:300px;
+	padding:10px 0px 25px 15px;
+	margin-top: 20px;
+}
+
+#desc {
+	margin-top:440px;
+	padding:0 20px;
+}
+
+.main {
+	background-color: #000000;
+}
+
+.detail {
+	display:inline-block;
+	padding:10px 10px 10px 30px;
+}
+
+#proImg {
+	float:left;
+}
+
+#contactDetail {
+	display:block;
+	padding-top:200px;
+}
+
+
+.cntr {
+	text-align: center;
+}
+
+#chooseImage {
+	display:none;
+}
+
+.cell {
+	line-height: 100px;
+	height: 100px;
+	vertical-align: middle;
+	padding-left:20px;
+		}
+
+.spacer1 {
+	display: block;
+	margin-top: 160px;
+	padding:10px;
+}
+
+.spacer2 {
+	display: block;
+	margin-top: -60px;
+} 
+
+#deleteBtn {
+	display:none;
+}
+
+#courseTime {
+	width:500px;
+	float:left;
+	margin-left:0px;
+	padding-top:0px;
+}
+
+#timeParts {
+	padding-top: 1px;
+
+}
+
+
+

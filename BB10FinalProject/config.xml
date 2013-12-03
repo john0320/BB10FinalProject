@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0" id="com.example.algonquinlife">
+  <author href="http://www.example.com/">Christine Johnston</author>
+  <name>AC Life</name>
+  <description>My Algonquin College Life</description>
+  <icon src="images/acLife.png"/>
+  <content src="index.html" />
+
+<rim:permissions>
+   <rim:permit>access_pimdomain_contacts</rim:permit> 
+   <rim:permit>access_location_services</rim:permit>
+   <rim:permit>use_camera</rim:permit> 
+   <rim:permit>access_shared</rim:permit>
+   <rim:permit>access_pimdomain_calendars</rim:permit> 
+</rim:permissions>
+
+  <feature id="blackberry.io" />
+  <feature id="blackberry.ui.dialog"/>
+  <feature id="blackberry.identity" />
+  <feature id="blackberry.system" />
+  <feature id="blackberry.pim.contacts" />
+  <feature id="blackberry.pim.calendar" />
+  <feature id="blackberry.invoke" required="true" version="1.0.0.0"/>
+  <feature id="blackberry.invoke.card"/>
+
+  <feature id="blackberry.app">
+    <param name="orientation" value="portrait" />
+  </feature>
+
+  <access uri="*" subdomains="true"/>
+  <access uri="file:///accounts/" subdomains="true" />
+
+
+</widget>
+
+	

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html> 
+	<head>
+		
+		<link  rel="stylesheet" type="text/css" href="css/bbui-min.css"></link>
+		<link  rel="stylesheet" type="text/css" href="css/style.css"></link>
+		<link  rel="stylesheet" type="text/css" href="css/myCSS.css"></link>
+		<script type="text/javascript" src="js/bbui-min.js"></script>
+		<script type="text/javascript" src="js/jquery.2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/final.js"></script>
+		<script type="text/javascript" src="js/contact.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript" src="js/transpo.js"></script>
+		<script type="text/javascript" src="js/invokecam.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+		<script type="text/javascript" src="js/calendar.js"></script>
+		<script type="text/javascript" src="js/campusServices.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
+		<script type="text/javascript" src="local:///chrome/webworks.js"></script>
+		<script type="text/javascript">
+			var webworksreadyFired = false;
+			window.addEventListener('load',function() {
+				document.addEventListener('webworksready', function(e) {
+					// This is code to ensure that if webworksready is fired multiple times we still only init() one time
+					startGeolocation();
+					var selectedContactID;
+					var selectedFilePath;
+					bb.init({
+						controlsDark: true,
+						listsDark: true,
+						onscreenready: function(element, id) {
+							if (id=="contactList"){
+								loadAllContacts();
+							}
+							if (id=="google"){
+								startGeolocation();
+							}
+							if (id=="photoGallery") {
+								loadPhotos();
+							}
+							if (id=="calendar") {
+								loadAllEvents();
+							}
+							if (id=="campusServices") {
+								getJsonServices();
+							}
+						},
+						ondomready: function(element, id){
+							if(id=="contactList"){
+								populateList();
+							}
+							if(id=="contactDetails"){
+								populateDetail();
+							}
+							if (id=="google") {
+                                initGoogleMaps();
+                            }
+                            if (id=="imagePicker") {
+								setPhoto();
+                            }
+                            if (id=="calendar") {
+                            	populateEvents();
+                            }
+                            if (id=="campusServicesItems") {
+                            	showServiceDetail();
+                            }
+						}
+					});
+					bb.pushScreen('startPage.html', 'startPage');
+				}, false);
+			}, false);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

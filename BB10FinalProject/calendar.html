@@ -1,0 +1,102 @@
+<div data-bb-type="screen" data-bb-effect="fade" data-bb-indicator="true" style="background-color: #252525; color:#fff">
+    <div id="schedulePage" data-bb-type="title" data-bb-caption="My Timetable" ></div>
+  
+	<div data-bb-type="round-panel" id="timetableList">  
+    	<div id="timetableEntries" data-bb-type="image-list" data-bb-style="default" data-bb-image-loading="loading.gif"></div>
+     
+
+    </div> 
+    
+    <div data-bb-type="round-panel" id="timetableAdd" style="display:none"> 
+
+      <div data-bb-type="row"> 
+        <div class="label">Course</div><div class="form"><input id="courseName" type="text" name="courseName" placeholder="Course Name"/></div>
+      </div>
+      <div data-bb-type="row"> 
+        <div class="label second">Class #</div><div class="form"><input id="roomNum" type="text" name="roomNum" placeholder="Room / Building Number"/></div>
+      </div>
+      <div data-bb-type="row"> 
+         <div class="spacer1">&nbsp;</div>
+        <select id="courseDay" data-bb-label="Day of the Week">
+          <option value="0" >Select</option>
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+        </select>
+      </div>
+
+       <div id="courseTime" data-bb-type="row"> 
+        <select id="courseTimes" data-bb-label="Time">
+          <option id="0" value="0" selected="true">Select</option>
+          <option value="1">1:00</option>
+          <option value="2">2:00</option> 
+          <option value="3">3:00</option> 
+          <option value="4">4:00</option> 
+          <option value="5">5:00</option> 
+          <option value="6">6:00</option> 
+          <option value="7">7:00</option> 
+          <option value="8">8:00</option> 
+          <option value="9">9:00</option> 
+          <option value="10">10:00</option> 
+          <option value="11">11:00</option> 
+          <option value="12">12:00</option> 
+        </select>
+      </div>
+
+
+      <div id="timeParts" data-bb-type="row"> 
+        <select id="timePart" data-bb-label="">
+          <option value="1">AM</option>
+          <option value="2">PM</option>
+        </select>
+      </div>
+
+       <div data-bb-type="row"> 
+       <div class="spacer2">&nbsp;</div>
+         <select id="selectDuration" data-bb-label="Class Duration">
+              <option value="0" selected="true">Select</option> 
+              <option value="60">1 Hour</option>
+              <option value="90">1 Hour 30 Min</option>
+              <option value="120">2 Hours</option>
+              <option value="150">2 Hours 30 Min</option>
+              <option value="180">3 Hours</option>
+              <option value="720">All Day Event</option>
+          </select>
+     </div>
+     <table>
+          <tr>
+            <td class="cell first" style="padding-top:7px;">Lab Class?</td>
+            <td  class="cell">
+              <div data-bb-type="toggle" data-bb-checked="true" data-bb-on="Yes" data-bb-off="No" onchange="" id="labToggle"/>
+            </td>
+          </tr>
+        <tr>
+            <td class="cell" style="padding-top:7px;">Set Alert?</td>
+            <td  class="cell">
+              <div data-bb-type="toggle" data-bb-checked="true" data-bb-on="Yes" data-bb-off="No" onchange="" id="alertToggle"/>
+            </td>
+        </tr>
+      </table>
+
+      <div data-bb-type="row">
+           <select id="selectAlert" data-bb-label="Alert set at">
+             <option value="0">Select</option>
+              <option value="15">15 Minutes</option>
+              <option value="30">30 Minutes</option>
+              <option value="60">1 Hour</option>
+              <option value="120">2 Hours</option>
+              <option value="1440">1 Day</option>
+          </select>
+      </div>
+
+      <div id="saveBtn" data-bb-type="button" data-bb-style="stretch" onclick="addClassItem();">Save To Calendar</div>
+      <div id="deleteBtn" data-bb-type="button" onclick="deleteClassItem();">Delete From Calendar</div>
+    </div>
+
+    <div id="calendarAction" data-bb-type="action-bar" data-bb-back-caption="Back">
+      <div data-bb-type="action" id="viewScheduleEntries" data-bb-style="Button" data-bb-img="images/list.png" onclick="selectListSchedule();">List Classes</div>
+      <div data-bb-type="action" id="enterScheduleItem" data-bb-style="Button" data-bb-img="images/calendarIcon.png" onclick="selectAddSchedule();">Add Class</div>
+    </div>
+</div>

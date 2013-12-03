@@ -1,0 +1,13 @@
+<div data-bb-type="screen" data-bb-effect="fade" data-bb-indicator="true" style="background-color: #252525; color:#fff">
+    <div id="pageTitle" data-bb-type="title" data-bb-caption="Image Picker"></div>
+
+	<div class="cntr">
+		<img id="placeHolder" src="images/smileyFace.png" width="800px" height="800px">
+	</div>
+	<div id="btnContainer">
+		<div class="btn" id="btnMyImages" data-bb-type="button" data-bb-img="images/photos.png" data-bb-style="stretch" onClick="bb.pushScreen('photoGallery.html', 'photoGallery');">Choose New Image from Photo Gallery</div>
+		<div class="btn" id="chooseImage" data-bb-type="button" data-bb-img="images/photos.png" data-bb-style="stretch" onclick="invokeCameraCard();">Re-Take</div>
+		<div class="btn" id="btnCamera" data-bb-type="button" data-bb-img="images/camera.png" data-bb-style="stretch" onclick="invokeCameraCard();">Take New Picture</div>
+	</div>
+	<div data-bb-type="action-bar" data-bb-back-caption="Back"></div>
+</div> 

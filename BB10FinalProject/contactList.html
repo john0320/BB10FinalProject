@@ -1,0 +1,25 @@
+<div data-bb-type="screen" data-bb-effect="fade" data-bb-indicator="true" style="background-color: #252525; color:#fff">
+    <div id="contactPage" data-bb-type="title" data-bb-caption="My Contacts" ></div>
+    
+	<div data-bb-type="round-panel" id="list">  
+    	<div id="contactList" data-bb-type="image-list" data-bb-style="arrowlist" data-bb-image-loading="loading.gif"></div>
+    </div> 
+    
+
+    <div data-bb-type="round-panel" id="addContact" style="display:none">  
+        <div class="label">First Name</div><div class="form"><input id="firstName" type="text" name="first" placeholder="First Name"/></div><br />
+        <div class="label second">Last Name</div><div class="form second"><input id="lastName"type="text" name="last" placeholder="Last Name"/></div><br />
+        <div class="label">Mobile #</div><div class="form"><input id="mPhone" type="text" name="mPhone" placeholder="Mobile Phone"/></div><br />
+        <div class="label">Home #</div><div class="form"><input id="hPhone" type="text" name="hPhone" placeholder="Home Phone"/></div><br />
+        <div class="label">@ School</div><div class="form"><input id="email1" type="email" name="email1" placeholder="Email Address - @School"/></div><br />
+        <div class="label">@ Home</div><div class="form"><input id="email2" type="email" name="email2" placeholder="Email Address - @Home"/></div><br />
+        <div id="desc"><input id="description" type="text" name="description" placeholder="How we met... " required/> </div>
+
+          <div id="saveBtn" data-bb-type="button" data-bb-style="stretch" onclick="addContact();">Save</div>
+     </div>
+	
+    <div data-bb-type="action-bar" data-bb-back-caption="Back">
+    <div data-bb-type="action" id="viewEntries" data-bb-style="Button" data-bb-selected="true" data-bb-img="images/list.png" onclick="selectContact();">List Contacts</div>
+         <div data-bb-type="action" id="enterContact" data-bb-style="Button" data-bb-accent-text="Enter Contact" data-bb-img="images/addContact.png" onclick="selectAdd();" data-bb-selected="true">Add Contact</div>
+         </div>
+</div>
